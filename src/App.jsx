@@ -3,28 +3,28 @@ export default function Portfolio() {
     {
       title: 'Felix',
       description:
-        'Developed a secure payment gateway integration with wallet top-up, Apple Pay, and bank transfer support.',
+        'Developed member and admin portals, focusing on usability, system functionality, and responsive design.',
       stack: ['Laravel', 'Vue 3', 'MySQL'],
       link: 'https://felix.api.org.au/products',
     },
     {
       title: 'Gym Rebuild',
       description:
-        'Built an applicant tracking system with interview scheduling, candidate filtering, and admin dashboards.',
+        'Rebuilt the existing platform from the ground up, improving user experience, responsiveness, and overall system performance.',
       stack: ['Laravel', 'Vue 3', 'MySQL', 'Tailwind CSS'],
       link: 'https://member.projectbetter.com.au',
     },
     {
       title: 'Farmtrek',
       description:
-        'Created a responsive admin dashboard for managing products, orders, analytics, and customer data.',
+        'Developed a customer ordering platform and integrated AWS services to support scalability and cloud-based functionality.',
       stack: ['Node.js', 'Vue 3', 'AWS Lambda', 'AWS Amplify', 'AWS API Gateway', 'Amazon DynamoDB'],
       link: 'https://www.ds.farmtrek.com.au',
     },
   ];
 
   const skills = {
-    frontend: ['Vue.js', 'Vue 3', 'Nuxt','React','React Native', 'JavaScript', 'TypeScript', 'HTML', 'CSS', 'Tailwind CSS'],
+    frontend: ['Vue.js', 'Vue 3', 'Nuxt', 'Quasar', 'React','React Native', 'JavaScript', 'TypeScript', 'HTML', 'CSS', 'Tailwind CSS'],
     backend: ['Laravel', 'PHP','Node.js', 'Express.js', 'AWS Lambda', 'AWS API Gateway', '.NET', 'REST API'],
     database: ['MySQL','PostgreSQL', 'Amazon DynamoDB','MongoDB', 'Microsoft SQL Server'],
     cloud: ['AWS','Digital Ocean'],
@@ -126,40 +126,40 @@ export default function Portfolio() {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project) => (
-            <div
+            <a
               key={project.title}
-              className="bg-slate-900 border border-slate-800 rounded-3xl p-6 hover:border-cyan-400 transition duration-300"
+              href={project.link}
+              target="_blank"
+              rel="noreferrer"
+              className="block"
             >
-              {/* <div className="h-40 rounded-2xl bg-gradient-to-br from-slate-800 to-slate-700 mb-6 flex items-center justify-center text-3xl font-bold text-cyan-400">
-                {project.title.charAt(0)}
-              </div> */}
+              <div className="bg-slate-900 border border-slate-800 rounded-3xl p-6 hover:border-cyan-400 hover:-translate-y-1 transition duration-300 cursor-pointer h-full">
 
-              <a
-                href={project.link}
-                target="_blank"
-                rel="noreferrer"
-                className="block"
-              >
-                <h3 className="text-2xl font-semibold mb-3 hover:text-cyan-400 transition">
+                {/* <div className="h-40 rounded-2xl bg-gradient-to-br from-slate-800 to-slate-700 mb-6 flex items-center justify-center text-3xl font-bold text-cyan-400">
+                  {project.title.charAt(0)}
+                </div> */}
+
+                <h3 className="text-2xl font-semibold mb-3 text-cyan-400 transition">
                   {project.title}
                 </h3>
-              </a>
 
-              <p className="text-slate-300 mb-6 leading-relaxed">
-                {project.description}
-              </p>
+                <p className="text-slate-300 mb-6 leading-relaxed">
+                  {project.description}
+                </p>
 
-              <div className="flex flex-wrap gap-2 mb-6">
-                {project.stack.map((tech) => (
-                  <span
-                    key={tech}
-                    className="bg-cyan-500/10 border border-cyan-500/30 text-cyan-300 px-3 py-1 rounded-lg text-sm"
-                  >
-                    {tech}
-                  </span>
-                ))}
+                <div className="flex flex-wrap gap-2">
+                  {project.stack.map((tech) => (
+                    <span
+                      key={tech}
+                      className="bg-cyan-500/10 border border-cyan-500/30 text-cyan-300 px-3 py-1 rounded-lg text-sm"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+
               </div>
-            </div>
+            </a>
           ))}
         </div>
       </section>

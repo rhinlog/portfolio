@@ -8,11 +8,11 @@ export default function Portfolio() {
       link: 'https://felix.api.org.au/products',
     },
     {
-      title: 'Gym Rebuild',
+      title: 'Jaaims',
       description:
-        'Rebuilt the existing platform from the ground up, improving user experience, responsiveness, and overall system performance.',
-      stack: ['Laravel', 'Vue 3', 'MySQL', 'Tailwind CSS'],
-      link: 'https://member.projectbetter.com.au',
+        'Refined UI for user experience, managed AWS infrastructure, and optimized performance.',
+      stack: ['Node.js', 'Vue.js', 'AWS Lambda', 'AWS Amplify', 'AWS API Gateway', 'Amazon DynamoDB'],
+      link: 'https://jaaimsapp.com',
     },
     {
       title: 'Farmtrek',

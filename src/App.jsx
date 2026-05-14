@@ -182,8 +182,9 @@ export default function Portfolio() {
             </div>
 
             <ul className="text-slate-300 leading-relaxed space-y-2 list-disc pl-5 mb-6">
-              <li>Designed and developed scalable cloudbasedapplication architecture.</li>
+              <li>Designed and developed scalable cloud-based application architecture.</li>
               <li>Built backend services using Node.js integrated with AWS serverless services.</li>
+              <li>Integrated AWS services for scalability and reliability.</li>
               <li>Implemented API integrations and improved application performance.</li>
               <li>Developed full-stack features for a modern web platform.</li>
               <li>Designed client-side and server-side architecture.</li>
@@ -213,7 +214,7 @@ export default function Portfolio() {
               <div>
                 <h3 className="text-2xl font-semibold">Full Stack Developer</h3>
                 <p className="text-slate-400 text-sm">
-                  Full-time / Digitaly Buzzed
+                  Digitaly Buzzed
                 </p>
               </div>
 

@@ -3,22 +3,22 @@ export default function Portfolio() {
     {
       title: 'Felix',
       description:
-        'Developed member and admin portals, focusing on usability, system functionality, and responsive design.',
+        'Built responsive member and admin portals focused on usability, performance, and streamlined system functionality to enhance overall user experience.',
       stack: ['Laravel', 'Vue 3', 'MySQL'],
       link: 'https://felix.api.org.au/products',
     },
     {
       title: 'Jaaims',
       description:
-        'Refined UI for user experience, managed AWS infrastructure, and optimized performance.',
-      stack: ['Node.js', 'Vue.js', 'AWS Lambda', 'AWS Amplify', 'AWS API Gateway', 'Amazon DynamoDB'],
+        'Enhanced the user interface and overall user experience, managed AWS infrastructure, and optimized system performance to improve scalability, reliability, and efficiency.',
+      stack: ['Node.js', 'Vue.js', 'AWS Services'],
       link: 'https://jaaimsapp.com',
     },
     {
       title: 'Farmtrek',
       description:
-        'Developed a customer ordering platform and integrated AWS services to support scalability and cloud-based functionality.',
-      stack: ['Node.js', 'Vue 3', 'AWS Lambda', 'AWS Amplify', 'AWS API Gateway', 'Amazon DynamoDB'],
+        'Developed a scalable customer ordering platform with an admin management dashboard, integrating AWS services to support cloud-based infrastructure, performance, and operational efficiency.',
+      stack: ['Node.js', 'Vue 3', 'AWS Lambda', 'AWS Amplify', 'AWS API Gateway', 'Amazon DynamoDB', 'Cognito'],
       link: 'https://www.ds.farmtrek.com.au',
     },
   ];

@@ -4,7 +4,7 @@ export default function Portfolio() {
       title: 'Felix',
       description:
         'Built responsive member and admin portals focused on usability, performance, and streamlined system functionality to enhance overall user experience.',
-      stack: ['Laravel', 'Vue 3', 'MySQL'],
+      stack: ['Laravel', 'Vue 3', 'MySQL', 'REST API'],
       link: 'https://felix.api.org.au/products',
     },
     {
@@ -170,7 +170,6 @@ export default function Portfolio() {
 
         <div className="space-y-6 mb-8">
           <div className="bg-slate-900 border border-slate-800 rounded-3xl p-8">
-            
             <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
               <div>
                 <h3 className="text-2xl font-semibold">Full Stack Engineer</h3>
@@ -182,7 +181,7 @@ export default function Portfolio() {
               </span>
             </div>
 
-            <ul className="text-slate-300 leading-relaxed space-y-2 list-disc pl-5">
+            <ul className="text-slate-300 leading-relaxed space-y-2 list-disc pl-5 mb-6">
               <li>Designed and developed scalable cloudbasedapplication architecture.</li>
               <li>Built backend services using Node.js integrated with AWS serverless services.</li>
               <li>Implemented API integrations and improved application performance.</li>
@@ -190,16 +189,32 @@ export default function Portfolio() {
               <li>Designed client-side and server-side architecture.</li>
             </ul>
 
+            <div className="flex flex-wrap gap-2">
+              {[
+                "Node.js",
+                "Vue.js",
+                "Vue 3",
+                "AWS Services"
+              ].map((tech) => (
+                <span
+                  key={tech}
+                  className="bg-cyan-500/10 border border-cyan-500/30 text-cyan-300 px-3 py-1 rounded-lg text-sm"
+                >
+                  {tech}
+                </span>
+              ))}
+            </div>
           </div>
         </div>
 
         <div className="space-y-6">
           <div className="bg-slate-900 border border-slate-800 rounded-3xl p-8">
-            
             <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
               <div>
                 <h3 className="text-2xl font-semibold">Full Stack Developer</h3>
-                <p className="text-slate-400 text-sm">Full-time / Digitaly Buzzed</p>
+                <p className="text-slate-400 text-sm">
+                  Full-time / Digitaly Buzzed
+                </p>
               </div>
 
               <span className="text-cyan-400 text-sm md:text-base mt-2 md:mt-0">
@@ -207,13 +222,28 @@ export default function Portfolio() {
               </span>
             </div>
 
-            <ul className="text-slate-300 leading-relaxed space-y-2 list-disc pl-5">
+            <ul className="text-slate-300 leading-relaxed space-y-2 list-disc pl-5 mb-6">
               <li>Developed scalable full-stack web applications</li>
               <li>Implemented REST APIs and backend services</li>
               <li>Collaborated with teams to deliver client solutions</li>
               <li>Improved application performance and system architecture</li>
             </ul>
 
+            <div className="flex flex-wrap gap-2">
+              {[
+                "Laravel",
+                "Vue 3",
+                "MySQL",
+                "REST API",
+              ].map((tech) => (
+                <span
+                  key={tech}
+                  className="bg-cyan-500/10 border border-cyan-500/30 text-cyan-300 px-3 py-1 rounded-lg text-sm"
+                >
+                  {tech}
+                </span>
+              ))}
+            </div>
           </div>
         </div>
       </section>

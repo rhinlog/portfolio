@@ -30,10 +30,54 @@ export default function Portfolio() {
     cloud: ['AWS','Digital Ocean'],
   };
 
+  // AI-assisted development capabilities
+  const aiTools = ['Claude Code', 'GitHub Copilot', 'Cursor', 'ChatGPT', 'Prompt Engineering'];
+
+  const aiCapabilities = [
+    {
+      title: 'AI Pair Programming',
+      description:
+        'Use AI coding assistants like Claude Code, Copilot, and Cursor to accelerate feature delivery, refactor confidently, and ship cleaner code faster.',
+    },
+    {
+      title: 'Prompt Engineering',
+      description:
+        'Craft precise, well-scoped prompts and context to get reliable results from LLMs for code generation, debugging, and documentation.',
+    },
+    {
+      title: 'AI Feature Integration',
+      description:
+        'Integrate LLM APIs and AI-powered features into web applications — from chat and automation to intelligent search and content generation.',
+    },
+  ];
+
   return (
     <div className="min-h-screen bg-slate-950 text-white">
+      {/* Navigation */}
+      <header className="sticky top-0 z-50 backdrop-blur bg-slate-950/70 border-b border-slate-800/80">
+        <nav className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+          <a href="#top" className="font-bold text-lg tracking-tight">
+            Raymund<span className="text-cyan-400">.</span>
+          </a>
+          <ul className="hidden md:flex items-center gap-8 text-sm text-slate-300">
+            <li><a href="#about" className="hover:text-cyan-400 transition">About</a></li>
+            <li><a href="#skills" className="hover:text-cyan-400 transition">Skills</a></li>
+            <li><a href="#ai" className="hover:text-cyan-400 transition">AI Development</a></li>
+            <li><a href="#projects" className="hover:text-cyan-400 transition">Projects</a></li>
+            <li><a href="#experience" className="hover:text-cyan-400 transition">Experience</a></li>
+            <li><a href="#contact" className="hover:text-cyan-400 transition">Contact</a></li>
+          </ul>
+          <a
+            href="mailto:raymunddh@gmail.com"
+            className="bg-cyan-500 hover:bg-cyan-400 transition text-slate-900 text-sm font-semibold px-4 py-2 rounded-xl"
+          >
+            Get in touch
+          </a>
+        </nav>
+      </header>
+
       {/* Hero Section */}
-      <section className="max-w-7xl mx-auto px-6 py-20">
+      <section id="top" className="max-w-7xl mx-auto px-6 py-20">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div>
             <p className="text-cyan-400 text-lg mb-4">Full Stack Developer</p>
@@ -80,17 +124,20 @@ export default function Portfolio() {
       </section>
 
       {/* About */}
-      <section className="max-w-7xl mx-auto px-6 py-16">
+      <section id="about" className="max-w-7xl mx-auto px-6 py-16">
         <div className="bg-slate-900 border border-slate-800 rounded-3xl p-8 shadow-xl">
           <h2 className="text-3xl font-bold mb-6">About Me</h2>
           <p className="text-slate-300 leading-relaxed text-lg">
             I’m a Full Stack Developer experienced in building scalable, efficient, and user-focused web applications. I work across both frontend and backend systems, with a strong focus on performance, clean architecture, and delivering reliable solutions.
           </p>
+          <p className="text-slate-300 leading-relaxed text-lg mt-4">
+            I embrace AI-assisted development, using tools like Claude Code, GitHub Copilot, and Cursor to boost productivity and code quality — while keeping a strong grasp of the fundamentals that make software maintainable and reliable.
+          </p>
         </div>
       </section>
 
       {/* Skills */}
-      <section className="max-w-7xl mx-auto px-6 py-16">
+      <section id="skills" className="max-w-7xl mx-auto px-6 py-16">
         <h2 className="text-3xl font-bold mb-10">Skills & Technologies</h2>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -118,8 +165,47 @@ export default function Portfolio() {
         </div>
       </section>
 
+      {/* AI-Assisted Development */}
+      <section id="ai" className="max-w-7xl mx-auto px-6 py-16">
+        <div className="bg-gradient-to-br from-cyan-500/10 to-blue-600/10 border border-cyan-500/20 rounded-3xl p-8 md:p-10">
+          <div className="flex items-center gap-3 mb-4">
+            <span className="text-xs font-semibold uppercase tracking-wider text-cyan-400 bg-cyan-500/10 border border-cyan-500/30 px-3 py-1 rounded-full">
+              AI-Powered Workflow
+            </span>
+          </div>
+
+          <h2 className="text-3xl font-bold mb-4">AI-Assisted Development</h2>
+          <p className="text-slate-300 leading-relaxed text-lg max-w-3xl mb-8">
+            I build with modern AI tools to deliver faster without compromising quality — pairing with AI coding assistants, engineering effective prompts, and integrating LLM capabilities directly into products.
+          </p>
+
+          <div className="grid md:grid-cols-3 gap-6 mb-8">
+            {aiCapabilities.map((cap) => (
+              <div
+                key={cap.title}
+                className="bg-slate-900/80 border border-slate-800 rounded-2xl p-6 h-full"
+              >
+                <h3 className="text-lg font-semibold mb-2 text-cyan-400">{cap.title}</h3>
+                <p className="text-slate-300 text-sm leading-relaxed">{cap.description}</p>
+              </div>
+            ))}
+          </div>
+
+          <div className="flex flex-wrap gap-2">
+            {aiTools.map((tool) => (
+              <span
+                key={tool}
+                className="bg-cyan-500/10 border border-cyan-500/30 text-cyan-300 px-3 py-1.5 rounded-lg text-sm"
+              >
+                {tool}
+              </span>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Projects */}
-      <section className="max-w-7xl mx-auto px-6 py-16">
+      <section id="projects" className="max-w-7xl mx-auto px-6 py-16">
         <div className="flex items-center justify-between mb-10">
           <h2 className="text-3xl font-bold">Featured Projects</h2>
         </div>
@@ -165,7 +251,7 @@ export default function Portfolio() {
       </section>
 
       {/* Experience */}
-      <section className="max-w-7xl mx-auto px-6 py-16">
+      <section id="experience" className="max-w-7xl mx-auto px-6 py-16">
         <h2 className="text-3xl font-bold mb-10">Experience</h2>
 
         <div className="space-y-6 mb-8">
@@ -250,7 +336,7 @@ export default function Portfolio() {
       </section>
 
       {/* Contact */}
-      <section className="max-w-4xl mx-auto px-6 py-20 text-center">
+      <section id="contact" className="max-w-4xl mx-auto px-6 py-20 text-center">
         <div className="bg-gradient-to-r from-cyan-500 to-blue-600 rounded-3xl p-12 shadow-2xl">
           <h2 className="text-4xl font-bold mb-6">Let’s Work Together</h2>
 
@@ -269,6 +355,7 @@ export default function Portfolio() {
             <a
               href="https://www.linkedin.com/in/raymund-hinlog-9b0172191"
               target="_blank"
+              rel="noreferrer"
               className="border border-white px-6 py-3 rounded-2xl font-semibold"
             >
               LinkedIn Profile
@@ -279,7 +366,7 @@ export default function Portfolio() {
 
       {/* Footer */}
       <footer className="border-t border-slate-800 py-8 text-center text-slate-500">
-        <p>© 2026 Raymund Hinlog - Build 1.2.1 All Systems Operational</p>
+        <p>© 2026 Raymund Hinlog - Build 1.3.0 All Systems Operational</p>
       </footer>
     </div>
   );

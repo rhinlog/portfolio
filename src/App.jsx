@@ -112,7 +112,7 @@ export default function Portfolio() {
               
               <div className="w-full h-full rounded-full bg-slate-900 overflow-hidden">
                 <img
-                  src="https://media.licdn.com/dms/image/v2/D5603AQEi-6YNrGpTsQ/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1691667030371?e=2147483647&v=beta&t=RiEPo-8XKjp5oI2uUrGqYOdlVRHXCn5YmP57nPirlJQ"
+                  src="https://avatars.githubusercontent.com/u/34413641?s=400&u=5fe4564972e9be331cf740f2b30b58ccd5780aa4&v=4"
                   alt="Profile"
                   className="w-full h-full object-cover"
                 />
